@@ -31,12 +31,13 @@ fetch(URL)
             // Crear imagen
             const imagen = document.createElement("img");
 
-            imagen.src = plato.imageUrl;
             imagen.alt = plato.name;
 
-            imagen.onerror = function () {
-                this.src = "https://placehold.co/300x200?text=Sin+imagen";
-            };
+            cargarImagen(
+                imagen,
+                plato.imageUrl,
+                plato.name + " plato típico Colombia"
+            );
 
             // Crear nombre
             const titulo = document.createElement("h2");

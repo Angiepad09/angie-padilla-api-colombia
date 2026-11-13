@@ -33,11 +33,13 @@ fetch(URL)
             // Crear imagen
             const imagen = document.createElement("img");
 
-            imagen.src = presidente.image;
-            imagen.alt = presidente.name;
-            imagen.onerror = function () {
-                this.src = "https://placehold.co/300x200?text=Sin+imagen";
-            };
+            imagen.alt = presidente.name + " " + presidente.lastName;
+
+              cargarImagen(
+                imagen,
+                presidente.image,
+                presidente.name + " " + presidente.lastName + " presidente de Colombia"
+            );
 
             // Crear título
             const titulo = document.createElement("h2");

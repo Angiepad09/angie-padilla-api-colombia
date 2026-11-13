@@ -1,15 +1,14 @@
-/* ===== Estilos generales ===== */
 * {
     box-sizing: border-box;
 }
-
+ 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f5f5f5;
     color: #333;
 }
-
+ 
 h1 {
     margin: 0;
     padding: 25px 20px;
@@ -19,7 +18,7 @@ h1 {
     background: linear-gradient(to right, #fcd116, #003893, #ce1126);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-
+ 
 /* ===== Menú de navegación ===== */
 nav {
     display: flex;
@@ -29,7 +28,7 @@ nav {
     padding: 15px;
     background-color: #003893;
 }
-
+ 
 nav a {
     color: #fff;
     text-decoration: none;
@@ -38,12 +37,12 @@ nav a {
     border-radius: 20px;
     transition: background-color 0.3s;
 }
-
+ 
 nav a:hover {
     background-color: #fcd116;
     color: #003893;
 }
-
+ 
 /* ===== Mensaje de carga y total ===== */
 #carga {
     text-align: center;
@@ -51,12 +50,12 @@ nav a:hover {
     color: #003893;
     font-style: italic;
 }
-
+ 
 #total {
     text-align: center;
     color: #ce1126;
 }
-
+ 
 /* ===== Contenedor de tarjetas ===== */
 #contenedor {
     display: grid;
@@ -66,7 +65,7 @@ nav a:hover {
     max-width: 1200px;
     margin: 0 auto;
 }
-
+ 
 /* ===== Tarjetas ===== */
 .tarjeta {
     background-color: #fff;
@@ -75,11 +74,11 @@ nav a:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s;
 }
-
+ 
 .tarjeta:hover {
     transform: translateY(-5px);
 }
-
+ 
 /* Imagen completa, sin recortes */
 .tarjeta img {
     display: block;
@@ -89,15 +88,127 @@ nav a:hover {
     background-color: #eeeeee; /* rellena el espacio que sobra */
     border-radius: 8px;
 }
-
+ 
 .tarjeta h2 {
     font-size: 20px;
     color: #003893;
     margin: 12px 0 8px;
 }
-
+ 
 .tarjeta p {
     font-size: 14px;
     line-height: 1.5;
     margin: 6px 0;
+}
+ 
+/* ===== Página de inicio ===== */
+.inicio {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+ 
+/* Recuadro de bienvenida con franjas de la bandera */
+.bienvenida {
+    text-align: center;
+    padding: 40px 25px;
+    border-radius: 12px;
+    background-color: #fff;
+    border-top: 10px solid;
+    border-image: linear-gradient(
+        to right,
+        #fcd116 0%, #fcd116 50%,
+        #003893 50%, #003893 75%,
+        #ce1126 75%, #ce1126 100%
+    ) 1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+ 
+.logo {
+    display: block;
+    width: 100%;
+    max-width: 240px;   /* tamaño máximo del logo */
+    height: auto;       /* conserva la proporción, sin recortes */
+    margin: 0 auto 10px;
+}
+
+.bienvenida h2 {
+    font-size: 30px;
+    margin: 0 0 12px;
+    color: #003893;
+}
+ 
+.bienvenida p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #555;
+}
+ 
+/* Tarjetas de las secciones */
+.secciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+ 
+.seccion {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    border-top: 6px solid #fcd116;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+ 
+.seccion:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+ 
+.seccion .icono {
+    font-size: 60px;
+}
+ 
+.seccion h3 {
+    color: #003893;
+    font-size: 22px;
+    margin: 10px 0;
+}
+ 
+.seccion p {
+    line-height: 1.5;
+}
+ 
+.seccion .boton {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #ce1126;
+    color: #fff;
+    font-weight: bold;
+}
+ 
+/* ===== Pie de página ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #003893;
+    color: #fff;
+}
+ 
+footer p {
+    margin: 5px 0;
+}
+ 
+footer a {
+    color: #fcd116;
 }

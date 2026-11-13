@@ -1,29 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
     <title>Inicio|Mini Portal Colombia</title>
 </head>
 
 <body>
 
-
     <h1>Mini Portal de Colombia</h1>
 
     <nav>
-        <a href="view/presidentes.html">
-            Presidentes de Colombia
-        </a>
-
-        <a href="view/platos.html">
-            Platos Típicos
-        </a>
+        <a href="index.html">Inicio</a>
+        <a href="view/presidentes.html">Presidentes de Colombia</a>
+        <a href="view/platos.html">Platos Típicos</a>
     </nav>
 
+    <main class="inicio">
 
+        <!-- Sección de bienvenida -->
+        <section class="bienvenida">
+            <img class="logo" src="img/logo.png" alt="Logo Mini Portal de Colombia">
+            <h2>¡Bienvenido a Colombia!</h2>
+            <p>
+                Conoce la historia y los sabores de nuestro país. La información
+                de este portal se obtiene en tiempo real desde la API pública
+                de Colombia.
+            </p>
+        </section>
+
+        <!-- Tarjetas que enlazan a cada sección -->
+        <section class="secciones">
+
+            <a class="seccion" href="view/presidentes.html">
+                <span class="icono">🏛️</span>
+                <h3>Presidentes de Colombia</h3>
+                <p>
+                    Recorre la lista de presidentes ordenada por año, con su
+                    periodo de gobierno, partido político y fotografía.
+                </p>
+                <span class="boton">Ver presidentes</span>
+            </a>
+
+            <a class="seccion" href="view/platos.html">
+                <span class="icono">🍲</span>
+                <h3>Sabores de Colombia</h3>
+                <p>
+                    Descubre los platos típicos de cada región: su descripción,
+                    departamento de origen e ingredientes.
+                </p>
+                <span class="boton">Ver platos</span>
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Datos obtenidos de
+            <a href="https://api-colombia.com/" target="_blank">api-colombia.com</a>
+        </p>
+    </footer>
 
 </body>
 

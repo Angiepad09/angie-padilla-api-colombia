@@ -2,7 +2,6 @@ const IMAGEN_POR_DEFECTO = "https://placehold.co/300x200?text=Sin+imagen";
  
 function cargarImagen(imagen, urlApi, textoBusqueda) {
  
-    // Evita que algunos servidores bloqueen la imagen por "hotlinking"
     imagen.referrerPolicy = "no-referrer";
     imagen.loading = "lazy";
  
@@ -19,7 +18,6 @@ function cargarImagen(imagen, urlApi, textoBusqueda) {
                     imagen.src = IMAGEN_POR_DEFECTO;
                 });
         } else {
-            // Si la de Wikipedia también falla, usar la de respaldo
             imagen.onerror = null;
             imagen.src = IMAGEN_POR_DEFECTO;
         }
@@ -28,12 +26,10 @@ function cargarImagen(imagen, urlApi, textoBusqueda) {
     if (urlApi && urlApi.trim() !== "") {
         imagen.src = urlApi;
     } else {
-        // La API no trajo imagen: ir directo a Wikipedia
         imagen.onerror();
     }
 }
  
-// Busca en Wikipedia en español y devuelve la URL de la imagen principal del artículo
 function buscarImagenWikipedia(texto) {
     const url =
         "https://es.wikipedia.org/w/api.php" +

@@ -42,6 +42,11 @@ nav a:hover {
     background-color: #fcd116;
     color: #003893;
 }
+
+nav a.activo {
+    background-color: #fcd116;
+    color: #003893;
+}
  
 /* ===== Encabezado fijo ===== */
 header {

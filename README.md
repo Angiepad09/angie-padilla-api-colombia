@@ -1,4 +1,5 @@
 # Mini Portal de Colombia
+<p align="center"><img src="img/logo.png" width="300"></p>
 
 ## Descripción
 
